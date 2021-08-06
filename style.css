@@ -655,10 +655,6 @@ body {
 
 /* Media Query */
 @media screen and (min-width: 320px) and (max-width: 768px) {
-    .container {
-        width: 100vw;
-    }
-
     .btn-navbar__input,
     .btn-navbar__label,
     .local-navbar {
@@ -680,6 +676,7 @@ body {
 
         /* content block */
     .content {
+        width: 100%;
         margin-left: 0;
     }
 
@@ -751,12 +748,13 @@ body {
     }
 
     .tab02 {
-        margin-left: 30px;
+        padding-left: 30px;
     }
 
         /* post-group block */
     .post-group {
         width: 100%;
+
     }
 
     .post-group__grid {
