@@ -311,7 +311,7 @@ body {
     display: inline-block;
     height: 14px;
     line-height: 14px;
-    margin: 0 0 6px 4px;
+    margin: 0 4px 6px 0;
     padding: 5px 10px;
     background-color: var(--color-tag-grey);
     border-radius: 2px;
@@ -627,4 +627,206 @@ body {
 
 .footer__copyright {
     font-style: normal;
+}
+
+/* Media Query */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .btn-navbar__input,
+    .btn-navbar__label,
+    .local-navbar {
+        display: none;
+    }
+
+    /* container block */
+    .container {
+        width: 640px;
+    }
+
+        /* content block */
+    .content {
+        margin-left: 0;
+    }
+
+    .content__title {
+        margin-left: 30px;
+    }
+
+    .content__tab01-label,
+    .content__tab02-label {
+        width: 320px;
+    }
+
+        /* tab block */
+    .tab01,
+    .tab02 {
+        width: 100%;
+        padding-left: 0;
+        border: none;
+    }
+
+    .post {
+        width: 100%;
+        height: 302px;
+        margin-bottom: 16px;
+        border-right: 0;
+        border-bottom: 4px solid var(--color-dull-white);
+    }
+
+    .post__box {
+        margin: 40px 0 0 30px
+    }
+
+    .post__banner-img {
+        display: none;
+    }
+
+    .post__title {
+        font-size: 32px;
+    }
+
+    .post__blog-name {
+        font-size: 26px;
+    }
+
+    .post__tag {
+        margin-right: 16px;
+        height: 26px;
+        line-height: 26px;
+        padding: 0;
+        background-color: transparent;
+        font-size: 26px;
+        color: var(--color-grey);
+    }
+
+    .post__tag--green {
+        color: var(--color-tag-green);
+    }
+    
+    .post__tag--purple {
+        color: var(--color-tag-puple);
+    }
+    
+    .post__tag--yellow {
+        color: var(--color-tag-yellow);
+    }
+    
+    .post__tag--red {
+        color: var(--color-tag-red);
+    }
+
+    .tab02 {
+        margin-left: 30px;
+    }
+
+        /* post-group block */
+    .post-group {
+        width: 100%;
+    }
+
+    .post-group__grid {
+        grid-template-columns: repeat(2, 290px);
+        grid-template-rows: repeat(4, 213px);
+        gap: 2px;
+    }
+
+        /* two-layer-group block */
+    .two-layer-group {
+        display: block;
+        width: 100%;
+    }
+
+    .two-layer-group__box {
+        width: 580px;
+        margin-bottom: 38px;
+        background-color: #fff;
+    }
+
+    .two-layer-group__cont-box {
+        display: flex;
+        width: 580px;
+        background-color: red;
+    }
+
+    .two-layer-group__cont01,
+    .two-layer-group__cont02 {
+        width: 290px;
+    }
+
+    .two-layer-group__list {
+        border: none;
+    }
+
+    .two-layer-group__number {
+        font-size: 18px;
+        color: var(--color-btn-bg-yellow);
+    }
+
+    .two-layer-group__text {
+        width: 380px;
+        font-size: 18px;
+    }
+
+        /* banner-group block */
+    .banner-group {
+        display: block;
+        width: 580px;
+        height: 250px;
+        margin-left: 0;
+        background-color: skyblue;
+    }
+
+    #banner-group__input-left,
+    #banner-group__input-right {
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        top: 87%;
+        transform: translateX(-50%);
+    }
+
+    #banner-group__input-left {
+        left: 46%;
+    }
+
+    #banner-group__input-right {
+        right: 46%;
+    }
+
+    .banner-group__label-left,
+    .banner-group__label-right {
+        top: 90%;
+    }
+
+    .banner-group__label-left {
+        left: 200px;
+    }
+    
+    .banner-group__label-right {
+        right: 200px;
+    }
+
+    .banner-group__banner-box {
+        width: 1740px;
+        height: 250px;
+        margin: 0;
+        background-color: red;
+    }
+
+    .banner-group_banner-img {
+        display: inline-block;
+        width: 592px;
+        height: 256px;
+        margin: 0;
+        background: url(imgs/pc/banners/sprites-tap2_bottom_banners.png) no-repeat;
+        transform: translateX(0);
+    }
+
+    #banner-group__input-left:checked ~ .banner-group__banner-box {
+        transform: translateX(0);
+        transition: all .35s;
+    }
+    #banner-group__input-right:checked ~ .banner-group__banner-box {
+        transform: translateX(-580px);
+        transition: all .35s;
+    }
 }
